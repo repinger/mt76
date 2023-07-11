@@ -1702,6 +1702,7 @@ void mt7915_mac_update_stats(struct mt7915_phy *phy)
 	u8 band = phy->mt76->band_idx;
 	u32 val;
 
+	return;
 	cnt = mt76_rr(dev, MT_MIB_SDR3(band));
 	mib->fcs_err_cnt += is_mt7915(&dev->mt76) ?
 		FIELD_GET(MT_MIB_SDR3_FCS_ERR_MASK, cnt) :
